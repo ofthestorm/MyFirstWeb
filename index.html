@@ -13,9 +13,27 @@
     <script>
         var obj = document.getElementById("words");
         function clicked() {
+
             $("body").slideUp("slow",function change() {
                 window.location.href='archive.html';
             });
+        }
+//        document.getElementById("words").onmouseover = function(){
+//            console.log("over");
+//        }
+        function over() {
+            document.getElementsByClassName("lefteyebrow")[0].style.transform = "translateY(10px)";
+            document.getElementsByClassName("righteyebrow")[0].style.transform = "translateY(-5px)";
+            document.getElementsByClassName("lefteyebrow")[1].style.transform = "translateY(10px)";
+            document.getElementsByClassName("righteyebrow")[1].style.transform = "translateY(-5px)";
+            document.getElementsByClassName("mouth")[0].style.transform = "translateX(-10px)";
+        };
+        function out() {
+            document.getElementsByClassName("lefteyebrow")[0].style.transform = "translateY(0px)";
+            document.getElementsByClassName("righteyebrow")[0].style.transform = "translateY(0px)";
+            document.getElementsByClassName("lefteyebrow")[1].style.transform = "translateY(0px)";
+            document.getElementsByClassName("righteyebrow")[1].style.transform = "translateY(0px)";
+            document.getElementsByClassName("mouth")[0].style.transform = "translateX(0px)";
         }
     </script>
 </head>
@@ -36,13 +54,13 @@
 <!--<div class='bot viewingblock'></div>-->
 <!--<div class='botright viewingblock'></div>-->
 <!--<div class='botrightright viewingblock'></div>-->
-<button class='normal'>Normal</button>
-<button class='angry'>Angry</button>
-<button class='confused'>Confused</button>
+<!--<button class='normal'>Normal</button>-->
+<!--<button class='angry'>Angry</button>-->
+<!--<button class='confused'>Confused</button>-->
 
 
 <div class="welcome">
-    <p id="words" onclick="clicked()">Welcome to my world !</p>
+    <p id="words" onclick="clicked()" onmouseover="over()" onmouseout="out()">Welcome to my world !</p>
 </div>
 
 <div class='bearfullwrap'>

@@ -16,3 +16,13 @@
 img[src=""]{
     opacity: 0;
 }
+
+.myicon {
+    height:30px;
+    width: 30px;
+}
+
+.navbar-brand {
+    padding: 10px;
+    height:30px;
+}

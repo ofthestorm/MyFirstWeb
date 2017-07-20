@@ -20,7 +20,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Blog</a>
+                <a class="navbar-brand" href="index.html">
+                    <img class="myicon" alt="Brand" src="icon/006-teddy-bear-1.png">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,7 +32,7 @@
                     <li><a href="about.html">About</a></li>
                     <li class="active"><a href="message.html">Message<span class="sr-only">(current)</span></a></li>
                 </ul>
-                <form class="navbar-form navbar-right" action="http://leehigh.me/keke/server/php/login.php" method="post">
+                <form class="navbar-form navbar-right" action="http://localhost/login.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Email" name="email">
                         <input type="password" class="form-control" placeholder="Password" name="password">
@@ -49,7 +51,7 @@
         <form action="" method="post">
             <textarea class="form-control" rows="3" ></textarea>
             <br/>
-            <button type="submit" class="btn btn-success" onclick="">Send</button>
+            <button type="submit" class="btn btn-success" onclick="sendComment()">Send</button>
         </form>
     </div>
 </div>
