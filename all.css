@@ -1,0 +1,18 @@
+.foot {
+    position:fixed;
+    bottom:0px;
+    width: 100%;
+    text-align:center
+    /*text-align:center;*/
+}
+
+.icon {
+    width: 1.5em; height: 1.5em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+img[src=""]{
+    opacity: 0;
+}

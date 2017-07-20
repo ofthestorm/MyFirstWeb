@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <script type="text/javascript" src="src/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="src/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var obj = document.getElementById("words");
+        function clicked() {
+            $("body").slideUp("slow",function change() {
+                window.location.href='archive.html';
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+<!--<div class='topleftleft viewingblock'></div>-->
+<!--<div class='topleft viewingblock'></div>-->
+<!--<div class='top viewingblock'></div>-->
+<!--<div class='topright viewingblock'></div>-->
+<!--<div class='toprightright viewingblock'></div>-->
+<!--<div class='midleftleft viewingblock'></div>-->
+<!--<div class='midleft viewingblock'></div>-->
+<!--<div class='midright viewingblock'></div>-->
+<!--<div class='midrightright viewingblock'></div>-->
+<!--<div class='botleftleft viewingblock'></div>-->
+<!--<div class='botleft viewingblock'></div>-->
+<!--<div class='bot viewingblock'></div>-->
+<!--<div class='botright viewingblock'></div>-->
+<!--<div class='botrightright viewingblock'></div>-->
+<button class='normal'>Normal</button>
+<button class='angry'>Angry</button>
+<button class='confused'>Confused</button>
+
+
+<div class="welcome">
+    <p id="words" onclick="clicked()">Welcome to my world !</p>
+</div>
+
+<div class='bearfullwrap'>
+    <div class='bearwrapper white'>
+        <div class='face'></div>
+        <div class='leftear'></div>
+        <div class='rightear'></div>
+        <div class='lefteyebrow'></div>
+        <div class='righteyebrow'></div>
+    </div>
+    <div class='bearwrapper'>
+        <div class='face'></div>
+        <div class='leftear'></div>
+        <div class='rightear'></div>
+        <div class='lefteye'></div>
+        <div class='righteye'></div>
+        <div class='lefteyebrow'></div>
+        <div class='righteyebrow'></div>
+        <div class='mouthwrapper'>
+            <div class='snout'>
+                <div class='nosleft'></div>
+                <div class='nosright'></div>
+            </div>
+            <div class='mouth'></div>
+        </div>
+        <div class='furone'></div>
+        <div class='furtwo'></div>
+        <div class='furthree'></div>
+        <div class='furfour'></div>
+        <div class='furfive'></div>
+        <div class='fursix'></div>
+        <div class='furseven'></div>
+        <div class='fureight'></div>
+        <div class='furnine'></div>
+        <div class='furten'></div>
+        <div class='fureleven'></div>
+        <div class='furtwelve'></div>
+        <div class='furthirteen'></div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
