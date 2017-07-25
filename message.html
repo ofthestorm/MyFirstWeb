@@ -5,6 +5,7 @@
     <title>Message</title>
     <link rel="stylesheet" href="src/bootstrap.min.css">
     <link rel="stylesheet" href="all.css">
+    <script type="text/javascript" src="sendComment.js"></script>
     <script type="text/javascript" src="src/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="src/bootstrap.min.js"></script>
 </head>
@@ -48,21 +49,80 @@
 <div class="center-block" style="width:50%">
     <div class="form">
         <label>Comment</label>
-        <form action="" method="post">
-            <textarea class="form-control" rows="3" ></textarea>
+        <form action="">
+            <textarea class="form-control" rows="4" id="textArea"></textarea>
             <br/>
-            <button type="submit" class="btn btn-success" onclick="sendComment()">Send</button>
+            <button type="button" class="btn btn-success" onclick="sendComment()">Send</button>
+            <p id="textHint">ee</p>
         </form>
+
     </div>
 </div>
 <br/>
-<div class="center-block" style="width:50%">
-    <div class="jumbotron">
+
+<style>
+    .left{
+        float:left;
+    }
+    .right{
+        float:right;
+    }
+    li{
+        list-style-type:none;
+    }
+    ul {padding:0;
+        margin:0
+    }
+    .content{
+        margin:0 auto;
+        width:50%;
+    }
+    .well{
+        clear:both;
+    }
+</style>
+
+<div class="content" >
+
+    <ul>
+        <li><span class="left" id="name1">name</span><span class="right" id="time1">time</span></li>
+    </ul>
+    <div class="well">
+
+    </div>
+    <ul>
+        <li><span class="left" id="name2">name</span><span class="right" id="time2">time</span></li>
+    </ul>
+    <div class="well">
+
+    </div>
+    <ul>
+        <li><span class="left" id="name3">name</span><span class="right" id="time3">time</span></li>
+    </ul>
+    <div class="well">
+
+    </div>
+    <ul>
+        <li><span class="left" id="name4">name</span><span class="right" id="time4">time</span></li>
+    </ul>
+    <div class="well">
+
+    </div>
+    <ul>
+        <li><span class="left" id="name5">name</span><span class="right" id="time5">time</span></li>
+    </ul>
+    <div class="well">
 
     </div>
 </div>
 
 
+<nav aria-label="...">
+    <ul class="pager">
+        <li class="disabled"><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</nav>
 
 
 <div class="foot">

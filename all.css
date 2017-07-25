@@ -1,9 +1,8 @@
 .foot {
-    position:fixed;
+    position: fixed;
     bottom:0px;
     width: 100%;
     text-align:center
-    /*text-align:center;*/
 }
 
 .icon {
@@ -26,3 +25,4 @@ img[src=""]{
     padding: 10px;
     height:30px;
 }
+

@@ -3,13 +3,14 @@
  */
 
 
-function sendComment(str) {
-    // console.log(str);
+function sendComment() {
+    var str = document.getElementById("textArea").value;
+    console.log(str);
     var xmlhttp;
 
     if (str=="")
     {
-        document.getElementById("iconHint").src = "";
+        document.getElementById("textHint").src = "";
         return;
     }
     if (window.XMLHttpRequest)
@@ -24,18 +25,11 @@ function sendComment(str) {
     {
         if (xmlhttp.readyState==4 && xmlhttp.status==200)
         {
-            // console.log(str);
-            console.log(str);
-            // document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
-            if(xmlhttp.responseText == "1") {
-                document.getElementById("iconHint").src = "icon/no.png";
-            } else {
-                document.getElementById("iconHint").src = "icon/yes.png";
-            }
+            document.getElementById("textHint").innerHTML=xmlhttp.responseText;
         }
     }
 
-    xmlhttp.open("POST","http://localhost/check_email.php",true);
+    xmlhttp.open("POST","http://localhost/send_comment.php",true);
     //必须在open之后send之前!!!
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     // var formData = new FormData();
