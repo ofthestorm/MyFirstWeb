@@ -80,7 +80,36 @@
 
 </style>
 
+<script>
+    function publishWriting() {
 
+        var content = document.getElementById("content").value;
+
+        var title = document.getElementById("title").value;
+
+        var xmlhttp;
+
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                window.location.href = "archive.html";
+            }
+        }
+
+        xmlhttp.open("POST","http://localhost/publish.php",true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("content="+content+"&title="+title);
+    }
+</script>
 <div class="content">
     <form action="">
         <label>title:</label>
@@ -95,10 +124,11 @@
         <br/>
         <div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn btn-success " onclick="publish()">Post</button>
+                <button type="button" class="btn btn-success " onclick="publishWriting()">Post</button>
             </div>
         </div>
     </form>
+    <p id="textHint">text</p>
 </div>
 
 <div class="foot">

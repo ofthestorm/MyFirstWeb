@@ -34,7 +34,7 @@ function showDataByText() {
         reader.readAsText(resultFile,'UTF-8');
         reader.onload = function (e) {
             var urlData = this.result;
-            document.getElementById("content").value += urlData;
+            document.getElementById("content").value = urlData;
         };
     }
 }
@@ -59,46 +59,6 @@ function update() {
         document.getElementById("title").value = path;
 
     }
-    showDataByText()
+    showDataByText();
 }
 
-function publish() {
-    //     id int,
-    //     title varchar(50),
-    //     content text,
-    //     create_time datetime,
-    //     blogger_id int,
-    var content = document.getElementById("content").value;
-    var title = document.getElementById("title").value;
-
-    var xmlhttp;
-
-    // if (str=="")
-    // {
-    //     document.getElementById("textHint").src = "";
-    //     return;
-    // }
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function()
-    {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-            // document.getElementById("textHint").innerHTML=xmlhttp.responseText;
-        }
-    }
-
-    xmlhttp.open("POST","http://localhost/publish.php",true);
-    //必须在open之后send之前!!!
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // var formData = new FormData();
-    // formData.append('q', str);
-    // xmlhttp.send(formData);
-    xmlhttp.send("content="+content+"&title="+title);
-}
